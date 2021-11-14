@@ -1,0 +1,14 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "me.bananab0i.amazingalloys.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "mixins": [
+  "ArmorItemMixin"
+  ],
+  "client": [
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

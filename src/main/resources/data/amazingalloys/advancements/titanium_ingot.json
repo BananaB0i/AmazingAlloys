@@ -1,0 +1,32 @@
+{
+    "__comment": "Made with TheDestruc7i0n's advancements generator: https://advancements.thedestruc7i0n.ca",
+    "criteria": {
+        "titanium_ingot": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "items": [
+                            "amazingalloys:titanium_ingot"
+                        ]
+                    }
+                ]
+            }
+        }
+    },
+    "rewards": {
+        "recipes": [
+            "amazingalloys:titanium_sword",
+            "amazingalloys:titanium_pickaxe",
+            "amazingalloys:titanium_axe",
+            "amazingalloys:titanium_shovel",
+            "amazingalloys:titanium_hoe",
+            "amazingalloys:titanium_helmet",
+            "amazingalloys:titanium_chestplate",
+            "amazingalloys:titanium_leggings",
+            "amazingalloys:titanium_boots",
+            "amazingalloys:titanium_block",
+            "amazingalloys:titanium_ingot"
+        ]
+    }
+}

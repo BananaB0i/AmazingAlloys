@@ -1,0 +1,17 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "a a",
+        "aaa",
+        "aaa"
+    ],
+    "key": {
+        "a": {
+            "item": "amazingalloys:titanium_ingot"
+        }
+    },
+    "result": {
+        "item": "amazingalloys:titanium_chestplate",
+        "count": 1
+    }
+}

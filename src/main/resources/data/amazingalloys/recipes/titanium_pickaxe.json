@@ -1,0 +1,20 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "aaa",
+        " / ",
+        " / "
+    ],
+    "key": {
+        "a": {
+            "item": "amazingalloys:titanium_ingot"
+        },
+        "/": {
+            "item": "minecraft:stick"
+        }
+    },
+    "result": {
+        "item": "amazingalloys:titanium_pickaxe",
+        "count": 1
+    }
+}

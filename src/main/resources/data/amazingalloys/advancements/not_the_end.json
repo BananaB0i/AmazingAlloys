@@ -1,0 +1,32 @@
+{
+    "parent": "minecraft:end/root",
+    "display": {
+        "icon": {
+            "item": "amazingalloys:enderite_shard"
+        },
+        "title": {
+            "translate": "advancements.end.enderite_shard.title"
+        },
+        "description": {
+            "translate": "advancements.end.enderite_shard.description"
+        },
+        "frame": "challenge",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "enderite_shard": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "items": [
+                            "amazingalloys:enderite_shard"
+                        ]
+                    }
+                ]
+            }
+        }
+    }
+}

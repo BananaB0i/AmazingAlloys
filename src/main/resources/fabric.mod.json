@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "id": "amazingalloys",
+  "version": "0.1.0",
+  "name": "AmazingAlloys",
+  "description": "A mod that adds new metals into Minecraft",
+  "authors": [
+    "BananaB0i"
+  ],
+  "contact": {},
+  "license": "MIT",
+  "icon": "assets/AmazingAlloys/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "me.bananab0i.amazingalloys.AmazingAlloys"
+    ]
+  },
+  "mixins": [
+    "amazingalloys.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.11.6",
+    "fabric": "*",
+    "minecraft": ""
+  }
+}

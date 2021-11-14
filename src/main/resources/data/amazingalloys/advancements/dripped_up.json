@@ -1,0 +1,48 @@
+{
+    "parent": "minecraft:end/root",
+    "display": {
+        "icon": {
+            "item": "amazingalloys:enderite_helmet",
+            "nbt": "{Damage:0}"
+        },
+        "title": {
+            "translate": "advancements.end.enderite_armor.title"
+        },
+        "description": {
+            "translate": "advancements.end.enderite_armor.description"
+        },
+        "frame": "challenge",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "enderite_armor": {
+              "trigger": "minecraft:inventory_changed",
+              "conditions": {
+                "items": [
+                  {
+                    "items": [
+                      "amazingalloys:enderite_helmet"
+                    ]
+                  },
+                  {
+                    "items": [
+                      "amazingalloys:enderite_chestplate"
+                    ]
+                  },
+                  {
+                    "items": [
+                      "amazingalloys:enderite_leggings"
+                    ]
+                  },
+                  {
+                    "items": [
+                      "amazingalloys:enderite_boots"
+                    ]
+                  }
+                ]
+              }
+            }
+    }
+}

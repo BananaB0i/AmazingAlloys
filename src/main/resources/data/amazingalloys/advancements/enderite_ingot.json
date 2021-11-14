@@ -1,0 +1,32 @@
+{
+    "__comment": "Made with TheDestruc7i0n's advancements generator: https://advancements.thedestruc7i0n.ca",
+    "criteria": {
+        "enderite_ingot": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "items": [
+                            "amazingalloys:enderite_ingot"
+                        ]
+                    }
+                ]
+            }
+        }
+    },
+    "rewards": {
+        "recipes": [
+            "amazingalloys:titanium_sword_upgrade",
+            "amazingalloys:titanium_pickaxe_upgrade",
+            "amazingalloys:titanium_axe_upgrade",
+            "amazingalloys:titanium_shovel_upgrade",
+            "amazingalloys:titanium_hoe_upgrade",
+            "amazingalloys:titanium_helmet_upgrade",
+            "amazingalloys:titanium_chestplate_upgrade",
+            "amazingalloys:titanium_leggings_upgrade",
+            "amazingalloys:titanium_boots_upgrade",
+            "amazingalloys:enderite_block",
+            "amazingalloys:enderite_ingot"
+        ]
+    }
+}

@@ -1,0 +1,25 @@
+{
+    "__comment": "Made with TheDestruc7i0n's advancements generator: https://advancements.thedestruc7i0n.ca",
+    "criteria": {
+        "has_raw_titanium": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "items": [
+                            "amazingalloys:raw_titanium"
+                        ]
+                    }
+                ]
+            }
+        }
+    },
+    "rewards": {
+        "recipes": [
+            "amazingalloys:blasting_raw_titanium",
+            "amazingalloys:smelting_raw_titanium",
+            "amazingalloys:raw_titanium_block",
+            "amazingalloys:raw_titanium"
+        ]
+    }
+}

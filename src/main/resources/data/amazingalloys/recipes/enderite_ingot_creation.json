@@ -1,0 +1,20 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "###",
+        "#aa",
+        "aa "
+    ],
+    "key": {
+        "#": {
+            "item": "amazingalloys:enderite_shard"
+        },
+        "a": {
+            "item": "amazingalloys:titanium_ingot"
+        }
+    },
+    "result": {
+        "item": "amazingalloys:titanium_ore",
+        "count": 1
+    }
+}

@@ -1,0 +1,12 @@
+{
+    "type": "minecraft:smithing",
+    "base": {
+        "item": "amazingalloys:titanium_sword"
+    },
+    "addition": {
+        "item": "amazingalloys:enderite_ingot"
+    },
+    "result": {
+        "item": "amazingalloys:enderite_sword"
+    }
+}

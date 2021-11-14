@@ -1,0 +1,17 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "###",
+        "###",
+        "###"
+    ],
+    "key": {
+        "#": {
+            "item": "amazingalloys:raw_titanium"
+        }
+    },
+    "result": {
+        "item": "amazingalloys:raw_titanium_block",
+        "count": 1
+    }
+}

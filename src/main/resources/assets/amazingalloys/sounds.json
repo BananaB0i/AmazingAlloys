@@ -1,0 +1,14 @@
+{
+    "enderite_armor_equipped": {
+        "subtitle": "subtitles.amazingalloys.enderite_armor_equipped",
+        "sounds": [
+            "amazingalloys:enderite_armor_equipped"
+        ]
+    },
+    "titanium_armor_equipped": {
+        "subtitle": "subtitles.amazingalloys.titanium_armor_equipped",
+        "sounds": [
+            "amazingalloys:titanium_armor_equipped"
+        ]
+    }
+}
