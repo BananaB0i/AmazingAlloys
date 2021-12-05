@@ -9,43 +9,38 @@ import net.minecraft.util.registry.Registry;
 import net.minecraft.util.registry.RegistryKey;
 import net.minecraft.world.gen.GenerationStep;
 import net.minecraft.world.gen.YOffset;
-import net.minecraft.world.gen.decorator.RangeDecorator;
-import net.minecraft.world.gen.decorator.RangeDecoratorConfig;
-import net.minecraft.world.gen.feature.ConfiguredFeature;
-import net.minecraft.world.gen.feature.Feature;
-import net.minecraft.world.gen.feature.OreFeatureConfig;
-import net.minecraft.world.gen.heightprovider.UniformHeightProvider;
+import net.minecraft.world.gen.decorator.CountPlacementModifier;
+import net.minecraft.world.gen.decorator.HeightRangePlacementModifier;
+import net.minecraft.world.gen.decorator.SquarePlacementModifier;
+import net.minecraft.world.gen.feature.*;
 
 public class AlloyFeatures {
-    public static ConfiguredFeature<?, ?> ORE_TITANIUM = Feature.ORE
+    public static ConfiguredFeature<?,?> OVERWORLD_TITANIUM_ORE_CONFIGURED_FEATURE = Feature.ORE
             .configure(new OreFeatureConfig(
-                    OreFeatureConfig.Rules.BASE_STONE_OVERWORLD,
+                    OreConfiguredFeatures.BASE_STONE_OVERWORLD,
                     AlloyBlocks.TITANIUM_ORE.getDefaultState(),
-                    2))
-            .decorate(RangeDecorator.RANGE.configure(new RangeDecoratorConfig(UniformHeightProvider.create(
-                    YOffset.fixed(0),
-                    YOffset.fixed(10)
-            ))))
-            .spreadHorizontally()
-            .repeat(2);
-    public static ConfiguredFeature<?, ?> ORE_TITANIUM_DEEPSLATE = Feature.ORE
+                    3));
+    public static PlacedFeature OVERWORLD_TITANIUM_ORE_PLACED_FEATURE = OVERWORLD_TITANIUM_ORE_CONFIGURED_FEATURE.withPlacement(
+            CountPlacementModifier.of(2),
+            SquarePlacementModifier.of(),
+            HeightRangePlacementModifier.uniform(YOffset.getBottom(), YOffset.fixed(5)));
+
+    public static ConfiguredFeature<?,?> OVERWORLD_DEEPSLATE_TITANIUM_ORE_CONFIGURED_FEATURE = Feature.ORE
             .configure(new OreFeatureConfig(
-                    OreFeatureConfig.Rules.DEEPSLATE_ORE_REPLACEABLES,
+                    OreConfiguredFeatures.DEEPSLATE_ORE_REPLACEABLES,
                     AlloyBlocks.DEEPSLATE_TITANIUM_ORE.getDefaultState(),
-                    2))
-            .decorate(RangeDecorator.RANGE.configure(new RangeDecoratorConfig(UniformHeightProvider.create(
-                    YOffset.fixed(-64),
-                    YOffset.fixed(0)
-            ))))
-            .spreadHorizontally()
-            .repeat(2);
+                    3));
+    public static PlacedFeature OVERWORLD_DEEPSLATE_TITANIUM_ORE_PLACED_FEATURE = OVERWORLD_DEEPSLATE_TITANIUM_ORE_CONFIGURED_FEATURE.withPlacement(
+            CountPlacementModifier.of(2),
+            SquarePlacementModifier.of(),
+            HeightRangePlacementModifier.uniform(YOffset.getBottom(), YOffset.fixed(0)));
 
     public static void registerFeatures() {
-        RegistryKey<ConfiguredFeature<?, ?>> oreTitaniumOverworld = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY, new Identifier(AmazingAlloys.MOD_ID, "ore_titanium_overworld"));
-        RegistryKey<ConfiguredFeature<?, ?>> oreTitaniumDeepslate = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY, new Identifier(AmazingAlloys.MOD_ID, "ore_titanium_deepslate"));
-        Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, oreTitaniumOverworld.getValue(), ORE_TITANIUM);
-        Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, oreTitaniumDeepslate.getValue(), ORE_TITANIUM_DEEPSLATE);
-        BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, oreTitaniumOverworld);
-        BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, oreTitaniumDeepslate);
+        Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, new Identifier(AmazingAlloys.MOD_ID, "overworld_titanium_ore"), OVERWORLD_TITANIUM_ORE_CONFIGURED_FEATURE);
+        Registry.register(BuiltinRegistries.PLACED_FEATURE, new Identifier(AmazingAlloys.MOD_ID, "overworld_titanium_ore"), OVERWORLD_TITANIUM_ORE_PLACED_FEATURE);
+        BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, RegistryKey.of(Registry.PLACED_FEATURE_KEY, new Identifier(AmazingAlloys.MOD_ID, "overworld_titanium_ore")));
+        Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, new Identifier(AmazingAlloys.MOD_ID, "overworld_deepslate_titanium_ore"), OVERWORLD_DEEPSLATE_TITANIUM_ORE_CONFIGURED_FEATURE);
+        Registry.register(BuiltinRegistries.PLACED_FEATURE, new Identifier(AmazingAlloys.MOD_ID, "overworld_deepslate_titanium_ore"), OVERWORLD_DEEPSLATE_TITANIUM_ORE_PLACED_FEATURE);
+        BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, RegistryKey.of(Registry.PLACED_FEATURE_KEY, new Identifier(AmazingAlloys.MOD_ID, "overworld_deepslate_titanium_ore")));
     }
 }

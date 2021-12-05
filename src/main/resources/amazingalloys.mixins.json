@@ -2,7 +2,7 @@
   "required": true,
   "minVersion": "0.8",
   "package": "me.bananab0i.amazingalloys.mixin",
-  "compatibilityLevel": "JAVA_8",
+  "compatibilityLevel": "JAVA_16",
   "mixins": [
   "ArmorItemMixin"
   ],

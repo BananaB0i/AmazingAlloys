@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "amazingalloys",
-  "version": "0.1.0",
+  "version": "${version}",
   "name": "AmazingAlloys",
   "description": "A mod that adds new metals into Minecraft",
   "authors": [
